@@ -305,12 +305,12 @@ Fork of:
 	{
 		background-color: var(--second-background) !important;
 	}
-
+	/*CodeMirror Matching bracket colouring
 	.CodeMirror-matchingbracket
 	{
 		color: var(--main-color) !important;
 	}
-
+	*/
 
 	/*Update warning*/
 	.newUI .updater-icons > :not(.check-update)::after
