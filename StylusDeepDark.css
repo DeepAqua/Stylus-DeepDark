@@ -1,10 +1,16 @@
-@-moz-document regexp("moz-extension://.*"), regexp("chrome-extension://.*") {
-
-/*Theme made by RaitaroH @https://github.com/RaitaroH/Stylus-DeepDark*/
-
-/*GNU General Public License v3.0*/
-
-/*1.1.0*/
+@-moz-document url-prefix("moz-extension://"), url-prefix("chrome-extension://") {
+/*
+DeepAqua modified DeepDark
+License: GNU General Public License v3.0
+Version: 1.1.0+1
+	
+Fork of:
+	Stylus-DeepDark by RaitaroH
+	License: GNU General Public License v3.0
+	Version: 1.1.0
+    Github: https://github.com/RaitaroH/Stylus-DeepDark
+    Userstyles: https://userstyles.org/styles/146887/stylus-deepdark
+*/
 
 	/*Main color variables*/
 	:root
@@ -213,7 +219,7 @@
 		border-color: var(--hover-background) !important;
 	}
 
-	#header h1, .CodeMirror
+	#header h1
 	{
 		color: var(--main-text) !important;
 	}
@@ -221,16 +227,24 @@
 	{
 		border-color: var(--main-background) !important;
 	}
-
+	
+	/*CodeMirror starting text colour
+	.CodeMirror {color: var(--main-text) !important;}
+	*/
+	
+	/*Line highlighting and gutters
 	.CodeMirror-lines, .cm-s-mbo.CodeMirror
 	{
 		background-color: var(--second-background) !important;
 	}
-
-	.CodeMirror-activeline-background, .CodeMirror-gutters, .resize-grip
+	*/
+	
+	/*.CodeMirror-activeline-background, .CodeMirror-gutters,*/ .resize-grip
 	{
 		background-color: var(--hover-background) !important;
 	}
+	
+	/*Border on CodeMirror box*/
 	.CodeMirror
 	{
 		border-color: var(--hover-background)  !important;
@@ -248,11 +262,12 @@
 		background: var(--main-color) !important;
 		color: var(--main-text) !important;
 	}
+	/*Text Selection in CodeMirror
 	.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection, .CodeMirror-selected, .CodeMirror-focused .CodeMirror-selected
 	{
 		background-color: var(--hover-background) !important;
 	}
-
+	*/
 
 	/*Popup*/
 	.main-controls, .entry, .firefox body, #help-popup .title
@@ -346,14 +361,21 @@
 		color: var(--main-color) !important;
 	}
 
-
-	.CodeMirror-lint-tooltip
-	{
+	/*CodeMirror tooltip*/
+	.CodeMirror-lint-tooltip {
 		background-color: var(--hover-background) !important;
 		color: var(--main-text) !important;
 	}
-
-
+	
+	/*CodeMirror autocomplete*/
+	.CodeMirror-hints {
+		background-color: var(--hover-background);
+		color: var(--main-text)
+	}
+	.CodeMirror-hint {
+		color: inherit;
+	}
+	
 	/*Search*/
 	.CodeMirror-search-match, .CodeMirror-search /*, .cm-searching*/
 	{
@@ -411,10 +433,12 @@
 	{
 		outline-color: var(--main-color);
 	}
+	/*CodeMirror cursor
 	.CodeMirror div.CodeMirror-cursor
 	{
 		border-color: var(--main-color);
 	}
+	*/
 	input
 	{
 		background-color: var(--second-background);
@@ -424,6 +448,7 @@
 	{
 		border-color: var(--hover-background);
 	}
+	/* Not sure what this does */
 	.CodeMirror.cm-s-default.CodeMirror-wrap.CodeMirror-active
 	{
 		outline-color: var(--main-color);
