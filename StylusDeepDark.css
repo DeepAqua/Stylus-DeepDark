@@ -228,27 +228,6 @@ Fork of:
 		border-color: var(--main-background) !important;
 	}
 	
-	/*CodeMirror starting text colour
-	.CodeMirror {color: var(--main-text) !important;}
-	*/
-	
-	/*Line highlighting and gutters
-	.CodeMirror-lines, .cm-s-mbo.CodeMirror
-	{
-		background-color: var(--second-background) !important;
-	}
-	*/
-	
-	/*.CodeMirror-activeline-background, .CodeMirror-gutters,*/ .resize-grip
-	{
-		background-color: var(--hover-background) !important;
-	}
-	
-	/*Border on CodeMirror box*/
-	.CodeMirror
-	{
-		border-color: var(--hover-background)  !important;
-	}
 
 
 	/*Changed text highlight*/
@@ -305,12 +284,7 @@ Fork of:
 	{
 		background-color: var(--second-background) !important;
 	}
-	/*CodeMirror Matching bracket colouring
-	.CodeMirror-matchingbracket
-	{
-		color: var(--main-color) !important;
-	}
-	*/
+
 
 	/*Update warning*/
 	.newUI .updater-icons > :not(.check-update)::after
@@ -361,6 +335,31 @@ Fork of:
 		color: var(--main-color) !important;
 	}
 
+
+	/*Stylish in chrome specific*/
+	:focus
+	{
+		outline-color: var(--main-color);
+	}
+
+	input
+	{
+		background-color: var(--second-background);
+		color: var(--main-text);
+	}
+	fieldset, [style-id], .disabled
+	{
+		border-color: var(--hover-background);
+	}
+
+	/*Stylus in chrome specific*/
+	#manage\.onlyEnabled\.invert, #manage\.onlyLocal\.invert
+	{
+		color: var(--dimer-text);
+	}
+
+	/**** CodeMirror ****/
+
 	/*CodeMirror tooltip*/
 	.CodeMirror-lint-tooltip {
 		background-color: var(--hover-background) !important;
@@ -375,6 +374,12 @@ Fork of:
 	.CodeMirror-hint {
 		color: inherit;
 	}
+
+	/*Border on CodeMirror box*/
+	.CodeMirror
+	{
+		border-color: var(--hover-background) !important;
+	}
 	
 	/*Search*/
 	.CodeMirror-search-match, .CodeMirror-search /*, .cm-searching*/
@@ -382,16 +387,52 @@ Fork of:
 		background: var(--main-color) !important;
 		border-color: var(--main-color) !important;
 	}
-	.CodeMirror-dialog, .CodeMirror-dialog input
-	{
+
+	/*Dialog*/
+	.CodeMirror-dialog, .CodeMirror-dialog input {
 		background: var(--hover-background) !important;
 		color: var(--main-text) !important;
 	}
-	.CodeMirror-dialog-top
-	{
+	.CodeMirror-dialog-top {
 		border-color: var(--main-color) !important;
 	}
 
+	/**** Syntax Colouring ****/
+
+	/*.CodeMirror-activeline-background, .CodeMirror-gutters,*/ .resize-grip {
+		background-color: var(--hover-background) !important;
+	}
+
+	/*Line highlighting and gutters
+	.CodeMirror-lines, .cm-s-mbo.CodeMirror
+	{
+		background-color: var(--second-background) !important;
+	}
+	*/
+
+	/*CodeMirror starting text colour
+	.CodeMirror {color: var(--main-text) !important;}
+	*/
+
+	/*CodeMirror cursor
+	.CodeMirror div.CodeMirror-cursor
+	{
+		border-color: var(--main-color);
+	}
+	*/
+
+	/*CodeMirror Matching bracket colouring
+	.CodeMirror-matchingbracket
+	{
+		color: var(--main-color) !important;
+	}
+	*/
+
+	/* Not sure what this does */
+	.CodeMirror.cm-s-default.CodeMirror-wrap.CodeMirror-active
+	{
+		outline-color: var(--main-color);
+	}
 
 	/*Default theme overwritten with adjusted colors*/
 	.cm-s-default.CodeMirror { background: var(--second-background); color: var(--main-text); }
@@ -426,38 +467,5 @@ Fork of:
 
 	.cm-s-default .cm-builtin { color: var(--main-color); }
 	.cm-s-default .cm-meta { color: var(--dimer-text); }
-
-
-	/*Stylish in chrome specific*/
-	:focus
-	{
-		outline-color: var(--main-color);
-	}
-	/*CodeMirror cursor
-	.CodeMirror div.CodeMirror-cursor
-	{
-		border-color: var(--main-color);
-	}
-	*/
-	input
-	{
-		background-color: var(--second-background);
-		color: var(--main-text);
-	}
-	fieldset, [style-id], .disabled
-	{
-		border-color: var(--hover-background);
-	}
-	/* Not sure what this does */
-	.CodeMirror.cm-s-default.CodeMirror-wrap.CodeMirror-active
-	{
-		outline-color: var(--main-color);
-	}
-
-	/*Stylus in chrome specific*/
-	#manage\.onlyEnabled\.invert, #manage\.onlyLocal\.invert
-	{
-		color: var(--dimer-text);
-	}
 
 }
