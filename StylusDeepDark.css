@@ -229,8 +229,7 @@ Fork of:
 	}
 	
 
-
-	/*Changed text highlight*/
+	/*Text highlight*/
 	::selection
 	{
 		background: var(--main-color) !important;
@@ -241,12 +240,7 @@ Fork of:
 		background: var(--main-color) !important;
 		color: var(--main-text) !important;
 	}
-	/*Text Selection in CodeMirror
-	.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection, .CodeMirror-selected, .CodeMirror-focused .CodeMirror-selected
-	{
-		background-color: var(--hover-background) !important;
-	}
-	*/
+
 
 	/*Popup*/
 	.main-controls, .entry, .firefox body, #help-popup .title
@@ -335,6 +329,11 @@ Fork of:
 		color: var(--main-color) !important;
 	}
 
+	/*Stylus in chrome specific*/
+	#manage\.onlyEnabled\.invert, #manage\.onlyLocal\.invert
+	{
+		color: var(--dimer-text);
+	}
 
 	/*Stylish in chrome specific*/
 	:focus
@@ -352,13 +351,36 @@ Fork of:
 		border-color: var(--hover-background);
 	}
 
-	/*Stylus in chrome specific*/
-	#manage\.onlyEnabled\.invert, #manage\.onlyLocal\.invert
+
+	/*CodeMirror editor border*/
+	.CodeMirror
 	{
-		color: var(--dimer-text);
+		border-color: var(--hover-background) !important;
 	}
 
-	/**** CodeMirror ****/
+	/*CodeMirror resize handle*/
+	.resize-grip
+	{
+		background-color: var(--hover-background) !important;
+	}
+
+	/*CodeMirror search*/
+	.CodeMirror-search-match, .CodeMirror-search /*, .cm-searching*/
+	{
+		background: var(--main-color) !important;
+		border-color: var(--main-color) !important;
+	}
+
+	/*CodeMirror dialog*/
+	.CodeMirror-dialog, .CodeMirror-dialog input
+	{
+		background: var(--hover-background) !important;
+		color: var(--main-text) !important;
+	}
+	.CodeMirror-dialog-top
+	{
+		border-color: var(--main-color) !important;
+	}
 
 	/*CodeMirror tooltip*/
 	.CodeMirror-lint-tooltip
@@ -378,37 +400,21 @@ Fork of:
 		color: inherit;
 	}
 
-	/*Border on CodeMirror box*/
-	.CodeMirror
-	{
-		border-color: var(--hover-background) !important;
-	}
-	
-	/*Search*/
-	.CodeMirror-search-match, .CodeMirror-search /*, .cm-searching*/
-	{
-		background: var(--main-color) !important;
-		border-color: var(--main-color) !important;
-	}
 
-	/*Dialog*/
-	.CodeMirror-dialog, .CodeMirror-dialog input
-	{
-		background: var(--hover-background) !important;
-		color: var(--main-text) !important;
-	}
-	.CodeMirror-dialog-top
-	{
-		border-color: var(--main-color) !important;
-	}
-
-	/**** Syntax Colouring ****/
-
-	/*.CodeMirror-activeline-background, .CodeMirror-gutters,*/ .resize-grip
+	/*
+	.CodeMirror-activeline-background, .CodeMirror-gutters
 	{
 		background-color: var(--hover-background) !important;
 	}
+	*/
 
+	/*Text Highlight in CodeMirror*/
+	/*
+	.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection, .CodeMirror-selected, .CodeMirror-focused .CodeMirror-selected
+	{
+		background-color: var(--hover-background) !important;
+	}
+	*/
 	/*Line highlighting and gutters
 	.CodeMirror-lines, .cm-s-mbo.CodeMirror
 	{
@@ -434,7 +440,6 @@ Fork of:
 	}
 	*/
 
-	/* Not sure what this does */
 	.CodeMirror.cm-s-default.CodeMirror-wrap.CodeMirror-active
 	{
 		outline-color: var(--main-color);
