@@ -329,6 +329,13 @@ Fork of:
 		color: var(--main-color) !important;
 	}
 
+	input
+	{
+		background-color: var(--second-background);
+		color: var(--main-text);
+	}
+
+
 	/*Stylus in chrome specific*/
 	#manage\.onlyEnabled\.invert, #manage\.onlyLocal\.invert
 	{
@@ -341,12 +348,7 @@ Fork of:
 		outline-color: var(--main-color);
 	}
 
-	input
-	{
-		background-color: var(--second-background);
-		color: var(--main-text);
-	}
-	fieldset, [style-id], .disabled
+	fieldset, [style-id]/*, .disabled*/ /*selector ".entry" overrides this as far as I can tell*/
 	{
 		border-color: var(--hover-background);
 	}
@@ -401,6 +403,7 @@ Fork of:
 	}
 
 
+	/*CodeMirror editor theme*/
 	/*
 	.CodeMirror-activeline-background, .CodeMirror-gutters
 	{
