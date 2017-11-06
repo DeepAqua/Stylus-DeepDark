@@ -8,8 +8,8 @@ Fork of:
 	Stylus-DeepDark by RaitaroH
 	License: GNU General Public License v3.0
 	Version: 1.1.0
-    Github: https://github.com/RaitaroH/Stylus-DeepDark
-    Userstyles: https://userstyles.org/styles/146887/stylus-deepdark
+	Github: https://github.com/RaitaroH/Stylus-DeepDark
+	Userstyles: https://userstyles.org/styles/146887/stylus-deepdark
 */
 
 	/*Main color variables*/
@@ -361,17 +361,20 @@ Fork of:
 	/**** CodeMirror ****/
 
 	/*CodeMirror tooltip*/
-	.CodeMirror-lint-tooltip {
+	.CodeMirror-lint-tooltip
+	{
 		background-color: var(--hover-background) !important;
 		color: var(--main-text) !important;
 	}
 	
 	/*CodeMirror autocomplete*/
-	.CodeMirror-hints {
+	.CodeMirror-hints
+	{
 		background-color: var(--hover-background);
 		color: var(--main-text)
 	}
-	.CodeMirror-hint {
+	.CodeMirror-hint
+	{
 		color: inherit;
 	}
 
@@ -389,17 +392,20 @@ Fork of:
 	}
 
 	/*Dialog*/
-	.CodeMirror-dialog, .CodeMirror-dialog input {
+	.CodeMirror-dialog, .CodeMirror-dialog input
+	{
 		background: var(--hover-background) !important;
 		color: var(--main-text) !important;
 	}
-	.CodeMirror-dialog-top {
+	.CodeMirror-dialog-top
+	{
 		border-color: var(--main-color) !important;
 	}
 
 	/**** Syntax Colouring ****/
 
-	/*.CodeMirror-activeline-background, .CodeMirror-gutters,*/ .resize-grip {
+	/*.CodeMirror-activeline-background, .CodeMirror-gutters,*/ .resize-grip
+	{
 		background-color: var(--hover-background) !important;
 	}
 
